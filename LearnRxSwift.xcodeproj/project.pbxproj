@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C201F8D22B6264B67D79C9FE /* Pods_LearnRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC563C1901FB596ECAADD213 /* Pods_LearnRxSwift.framework */; };
+		EC9CC5AD20C768660092E8C9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC5AC20C768660092E8C9 /* LoginViewModel.swift */; };
 		ECF6C22420C61BB9001851C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6C22320C61BB9001851C1 /* AppDelegate.swift */; };
 		ECF6C22620C61BB9001851C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6C22520C61BB9001851C1 /* ViewController.swift */; };
 		ECF6C22920C61BB9001851C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF6C22720C61BB9001851C1 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		AB7034C73F003E65F42014BB /* Pods-LearnRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnRxSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnRxSwift/Pods-LearnRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		B462CC9A630B8475DC426FAF /* Pods-LearnRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnRxSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnRxSwift/Pods-LearnRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		EC9CC5AC20C768660092E8C9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ECF6C22020C61BB9001851C1 /* LearnRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF6C22320C61BB9001851C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECF6C22520C61BB9001851C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +42,7 @@
 		ECF6C23420C61BBA001851C1 /* LearnRxSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnRxSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF6C23820C61BBA001851C1 /* LearnRxSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnRxSwiftTests.swift; sourceTree = "<group>"; };
 		ECF6C23A20C61BBA001851C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECF6C24520C61D46001851C1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		ECF6C24520C61D46001851C1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FC563C1901FB596ECAADD213 /* Pods_LearnRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EC9CC5AB20C768300092E8C9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC9CC5AC20C768660092E8C9 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		ECF6C21720C61BB9001851C1 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		ECF6C22220C61BB9001851C1 /* LearnRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				EC9CC5AB20C768300092E8C9 /* ViewModel */,
 				ECF6C22320C61BB9001851C1 /* AppDelegate.swift */,
 				ECF6C22520C61BB9001851C1 /* ViewController.swift */,
 				ECF6C22720C61BB9001851C1 /* Main.storyboard */,
@@ -270,6 +281,7 @@
 			files = (
 				ECF6C22620C61BB9001851C1 /* ViewController.swift in Sources */,
 				ECF6C22420C61BB9001851C1 /* AppDelegate.swift in Sources */,
+				EC9CC5AD20C768660092E8C9 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +445,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJ7ZVEBB38;
 				INFOPLIST_FILE = LearnRxSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-0.LearnRxSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -449,7 +464,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJ7ZVEBB38;
 				INFOPLIST_FILE = LearnRxSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-0.LearnRxSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -465,7 +483,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJ7ZVEBB38;
 				INFOPLIST_FILE = LearnRxSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-0.LearnRxSwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -482,7 +504,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJ7ZVEBB38;
 				INFOPLIST_FILE = LearnRxSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-0.LearnRxSwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
