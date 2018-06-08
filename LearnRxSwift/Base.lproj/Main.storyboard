@@ -75,7 +75,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="A9K-8O-XCB"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="flS-Lx-IiS"/>
+                                    <constraint firstAttribute="height" constant="36" id="flS-Lx-IiS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="登录">
@@ -85,21 +85,32 @@
                                     <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZa-aN-i32"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaF-Ap-Fvh">
+                                <rect key="frame" x="20" y="428" width="335" height="209"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93054013324873097" green="0.12522399082606303" blue="0.11705655752337053" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="S1p-Vc-75z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0xB-Xf-B1V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XaF-Ap-Fvh" secondAttribute="bottom" constant="30" id="2o1-jL-aUz"/>
                             <constraint firstItem="S1p-Vc-75z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="94Z-Fd-PYn"/>
+                            <constraint firstItem="XaF-Ap-Fvh" firstAttribute="top" secondItem="uhh-cB-LK4" secondAttribute="bottom" constant="40" id="Gjr-OG-CJU"/>
                             <constraint firstItem="Lpq-Zw-RK4" firstAttribute="top" secondItem="S1p-Vc-75z" secondAttribute="bottom" constant="36" id="M38-bO-KrJ"/>
                             <constraint firstItem="uhh-cB-LK4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OBW-an-7lu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lpq-Zw-RK4" secondAttribute="trailing" constant="16" id="dbw-oQ-WhM"/>
                             <constraint firstItem="uhh-cB-LK4" firstAttribute="top" secondItem="Lpq-Zw-RK4" secondAttribute="bottom" constant="30" id="e8A-vD-u7V"/>
+                            <constraint firstItem="XaF-Ap-Fvh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rwi-gN-Q4R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XaF-Ap-Fvh" secondAttribute="trailing" constant="20" id="spW-ZE-8an"/>
                             <constraint firstItem="Lpq-Zw-RK4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uX5-R2-MGn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="yOV-41-kbf" id="UlN-tH-Z8t"/>
+                        <outlet property="errorLabel" destination="XaF-Ap-Fvh" id="al0-IJ-VuH"/>
                         <outlet property="loginButton" destination="uhh-cB-LK4" id="fA4-eI-Bzm"/>
                         <outlet property="nameField" destination="d05-iX-Jnj" id="nxO-oo-gDA"/>
                         <outlet property="passwordField" destination="lmp-nf-rdw" id="2wY-BW-ywH"/>

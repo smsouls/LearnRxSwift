@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C201F8D22B6264B67D79C9FE /* Pods_LearnRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC563C1901FB596ECAADD213 /* Pods_LearnRxSwift.framework */; };
+		EC6D7FB120CA110600159695 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D7FB020CA110600159695 /* LoginRequest.swift */; };
+		EC6D7FB420CA1E2500159695 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D7FB320CA1E2500159695 /* RegularExpression.swift */; };
 		EC9CC5AD20C768660092E8C9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC5AC20C768660092E8C9 /* LoginViewModel.swift */; };
 		ECF6C22420C61BB9001851C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6C22320C61BB9001851C1 /* AppDelegate.swift */; };
 		ECF6C22620C61BB9001851C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6C22520C61BB9001851C1 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		AB7034C73F003E65F42014BB /* Pods-LearnRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnRxSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnRxSwift/Pods-LearnRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		B462CC9A630B8475DC426FAF /* Pods-LearnRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnRxSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnRxSwift/Pods-LearnRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		EC6D7FB020CA110600159695 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		EC6D7FB320CA1E2500159695 /* RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpression.swift; sourceTree = "<group>"; };
 		EC9CC5AC20C768660092E8C9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ECF6C22020C61BB9001851C1 /* LearnRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF6C22320C61BB9001851C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EC6D7FAF20CA10B200159695 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EC6D7FB020CA110600159695 /* LoginRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EC6D7FB220CA1C7A00159695 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				EC6D7FB320CA1E2500159695 /* RegularExpression.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		EC9CC5AB20C768300092E8C9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +134,8 @@
 		ECF6C22220C61BB9001851C1 /* LearnRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				EC6D7FB220CA1C7A00159695 /* Utility */,
+				EC6D7FAF20CA10B200159695 /* Networking */,
 				EC9CC5AB20C768300092E8C9 /* ViewModel */,
 				ECF6C22320C61BB9001851C1 /* AppDelegate.swift */,
 				ECF6C22520C61BB9001851C1 /* ViewController.swift */,
@@ -279,9 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6D7FB420CA1E2500159695 /* RegularExpression.swift in Sources */,
 				ECF6C22620C61BB9001851C1 /* ViewController.swift in Sources */,
 				ECF6C22420C61BB9001851C1 /* AppDelegate.swift in Sources */,
 				EC9CC5AD20C768660092E8C9 /* LoginViewModel.swift in Sources */,
+				EC6D7FB120CA110600159695 /* LoginRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
