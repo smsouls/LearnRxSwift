@@ -41,10 +41,52 @@ class ViewController: UIViewController {
 //        let validText = Observable.combineLatest(validTextFieldCollection) { filters in
 //            return filters.filter { $0 }.count == filters.count
 //        }
-        
 
+
+//        let stringSubject = PublishSubject<String>()
+//        let intSubject = PublishSubject<Int>()
+//
+//
+//        Observable.combineLatest(stringSubject, intSubject){ stringElement, intElement in
+//            "\(stringElement)\(intElement)"
+//            }.subscribe(onNext: {
+//                print($0)
+//            }).disposed(by: self.disposeBag)
+//
+//
+//        stringSubject.onNext("🅰️")
+//        stringSubject.onNext("🅱️")
+//        intSubject.onNext(1)
+//        intSubject.onNext(2)
+//        stringSubject.onNext("🆎")
         
+//        let stringObservable = Observable.just("❤️")
+//        let fruitObservable = Observable.from(["🍎", "🍐", "🍊"])
+//        let animalObservable = Observable.of("🐶", "🐱", "🐭", "🐹")
+//
+//        Observable.combineLatest([stringObservable, fruitObservable, animalObservable]){
+//            "\($0[0]) \($0[1]) \($0[2])"
+//            }.subscribe(onNext: {
+//                print($0)
+//            }).disposed(by: self.disposeBag)
         
+        let subject1 = BehaviorSubject(value: "🐶")
+        let subject2 = BehaviorSubject(value: "🐱")
+        
+        let variable = Variable(subject1)
+        
+        variable.asObservable().switchLatest()
+            .subscribe(onNext: {
+                print($0)
+            }).disposed(by: self.disposeBag)
+        
+        subject1.onNext("🐭")
+        subject1.onNext("🐹")
+        
+        variable.value = subject2
+        subject1.onNext("🍎")
+        subject2.onNext("🍊")
+
         
         
         let validName = nameField.rx.text.filter{$0 != nil
@@ -91,7 +133,7 @@ class ViewController: UIViewController {
         }).disposed(by: self.disposeBag)
         
 //        let validText = Observable.combineLatest(validName.asObservable(), validPassword.asObservable(), validPhoneNumber.asObservable(), validEmail.asObservable()){
-//            return $0 + $1 + $2 + $3
+//
 //        }
 //
 //        validText.asObservable().subscribe(onNext: {[weak self] enable in

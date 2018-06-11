@@ -99,5 +99,50 @@ class LearnRxSwiftViewController: UIViewController {
         
         
     }
+    
+    func play3() {
+        
+        Observable.of("🐶", "🐱", "🐭", "🐹").startWith("1")
+            .startWith("2")
+            .startWith("3", "4", "5")
+            .subscribe(onNext: {
+                print($0)
+            }).disposed(by: self.disposeBag)
+        
+        
+        let subject1 = PublishSubject<String>()
+        let subject2 = PublishSubject<String>()
+        
+        Observable.of(subject1, subject2)
+            .merge()
+            .subscribe(onNext:{
+                print($0)
+            }).disposed(by: self.disposeBag)
+        
+        subject1.onNext("🅰️")
+        subject1.onNext("🅱️")
+        subject2.onNext("①")
+        subject2.onNext("②")
+        subject1.onNext("🆎")
+        subject2.onNext("③")
+        
+        
+        let stringSubject = PublishSubject<String>()
+        let intSubject = PublishSubject<Int>()
+        
+        Observable.zip(stringSubject, intSubject){ stringElement, intElement in
+            "\(stringElement)  \(intElement)"
+            }.subscribe(onNext: {print( $0)})
+            .disposed(by: self.disposeBag)
+        
+        stringSubject.onNext("🅰️")
+        stringSubject.onNext("🅱️")
+        intSubject.onNext(1)
+        intSubject.onNext(2)
+        stringSubject.onNext("🆎")
+        intSubject.onNext(3)
+        
+        
+    }
 
 }
