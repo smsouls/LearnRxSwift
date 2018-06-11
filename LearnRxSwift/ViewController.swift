@@ -43,6 +43,10 @@ class ViewController: UIViewController {
 //        }
         
 
+        
+        
+        
+        
         let validName = nameField.rx.text.filter{$0 != nil
             }.map{
                 return $0!.count > 3
@@ -86,13 +90,13 @@ class ViewController: UIViewController {
             self?.warnMessage.setValue(self?.loginVM.eMailMessage(text!), forKey: "eMail")
         }).disposed(by: self.disposeBag)
         
-        let validText = Observable.combineLatest(validName.asObservable(), validPassword.asObservable(), validPhoneNumber.asObservable(), validEmail.asObservable()){
-            return $0 + $1 + $2 + $3
-        }
-        
-        validText.asObservable().subscribe(onNext: {[weak self] enable in
-            self?.loginButton.isEnabled = enable
-        }).disposed(by: self.disposeBag)
+//        let validText = Observable.combineLatest(validName.asObservable(), validPassword.asObservable(), validPhoneNumber.asObservable(), validEmail.asObservable()){
+//            return $0 + $1 + $2 + $3
+//        }
+//
+//        validText.asObservable().subscribe(onNext: {[weak self] enable in
+//            self?.loginButton.isEnabled = enable
+//        }).disposed(by: self.disposeBag)
         
     }
 
