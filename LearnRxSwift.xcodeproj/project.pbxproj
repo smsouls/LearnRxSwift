@@ -16,7 +16,6 @@
 		ECF6C22620C61BB9001851C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6C22520C61BB9001851C1 /* ViewController.swift */; };
 		ECF6C22920C61BB9001851C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF6C22720C61BB9001851C1 /* Main.storyboard */; };
 		ECF6C22B20C61BBA001851C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF6C22A20C61BBA001851C1 /* Assets.xcassets */; };
-		ECF6C22E20C61BBA001851C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF6C22C20C61BBA001851C1 /* LaunchScreen.storyboard */; };
 		ECF6C23920C61BBA001851C1 /* LearnRxSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6C23820C61BBA001851C1 /* LearnRxSwiftTests.swift */; };
 		ECF6C24620C61D46001851C1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = ECF6C24520C61D46001851C1 /* Podfile */; };
 /* End PBXBuildFile section */
@@ -43,7 +42,6 @@
 		ECF6C22520C61BB9001851C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ECF6C22820C61BB9001851C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECF6C22A20C61BBA001851C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ECF6C22D20C61BBA001851C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECF6C22F20C61BBA001851C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECF6C23420C61BBA001851C1 /* LearnRxSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnRxSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF6C23820C61BBA001851C1 /* LearnRxSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnRxSwiftTests.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				EC9B281520CE00EC001A4042 /* LearnRxSwiftViewController.swift */,
 				ECF6C22720C61BB9001851C1 /* Main.storyboard */,
 				ECF6C22A20C61BBA001851C1 /* Assets.xcassets */,
-				ECF6C22C20C61BBA001851C1 /* LaunchScreen.storyboard */,
 				ECF6C22F20C61BBA001851C1 /* Info.plist */,
 			);
 			path = LearnRxSwift;
@@ -242,7 +239,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECF6C22E20C61BBA001851C1 /* LaunchScreen.storyboard in Resources */,
 				ECF6C22B20C61BBA001851C1 /* Assets.xcassets in Resources */,
 				ECF6C24620C61D46001851C1 /* Podfile in Resources */,
 				ECF6C22920C61BB9001851C1 /* Main.storyboard in Resources */,
@@ -338,14 +334,6 @@
 				ECF6C22820C61BB9001851C1 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ECF6C22C20C61BBA001851C1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECF6C22D20C61BBA001851C1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -473,6 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJ7ZVEBB38;
 				INFOPLIST_FILE = LearnRxSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,6 +481,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJ7ZVEBB38;
 				INFOPLIST_FILE = LearnRxSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
