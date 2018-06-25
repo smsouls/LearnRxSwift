@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ukT-w3-foO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1p-Vc-75z">
-                                <rect key="frame" x="157.5" y="66" width="60" height="36"/>
+                                <rect key="frame" x="157.5" y="110" width="60" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="XeF-qd-fmi"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="nwR-Eu-voI"/>
@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Lpq-Zw-RK4">
-                                <rect key="frame" x="16" y="138" width="343" height="184"/>
+                                <rect key="frame" x="16" y="182" width="343" height="184"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="姓名:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d05-iX-Jnj">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="46"/>
@@ -71,7 +71,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhh-cB-LK4">
-                                <rect key="frame" x="137.5" y="352" width="100" height="36"/>
+                                <rect key="frame" x="137.5" y="396" width="100" height="36"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="A9K-8O-XCB"/>
@@ -82,12 +82,11 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZa-aN-i32"/>
-                                    <segue destination="kdp-8e-goq" kind="custom" id="bId-bm-gvW"/>
+                                    <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dkv-rH-K6K"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaF-Ap-Fvh">
-                                <rect key="frame" x="20" y="428" width="335" height="209"/>
+                                <rect key="frame" x="20" y="472" width="335" height="165"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.93054013324873097" green="0.12522399082606303" blue="0.11705655752337053" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -109,6 +108,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Fxd-Hx-GFS"/>
                     <connections>
                         <outlet property="emailField" destination="yOV-41-kbf" id="UlN-tH-Z8t"/>
                         <outlet property="errorLabel" destination="XaF-Ap-Fvh" id="al0-IJ-VuH"/>
@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10" y="32"/>
+            <point key="canvasLocation" x="928.79999999999995" y="31.934032983508249"/>
         </scene>
         <!--Learn Rx Swift View Controller-->
         <scene sceneID="Jdn-2P-E6K">
@@ -132,10 +132,29 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EXb-g2-2Eg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="K4e-ml-4cn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ch1-wM-Dp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="32"/>
+            <point key="canvasLocation" x="1507" y="32"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vox-w3-mHP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ukT-w3-foO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sDR-Ax-hTm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WVp-16-zbf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Do3-fa-akv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.4" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>

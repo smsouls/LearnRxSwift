@@ -42,16 +42,6 @@ class ViewController: UIViewController {
 //            return filters.filter { $0 }.count == filters.count
 //        }
 
-        
-        let disposeBag = DisposeBag()
-        
-        Observable.repeatElement("🔴")
-            .take(3)
-            .subscribe(onNext: { print($0) })
-            .disposed(by: disposeBag)
-        
-        
-        
         let validName = nameField.rx.text.filter{$0 != nil
             }.map{
                 return $0!.count > 3
@@ -98,21 +88,17 @@ class ViewController: UIViewController {
         let validText = Observable.combineLatest(validName.asObservable(), validPassword.asObservable(), validPhoneNumber.asObservable(), validEmail.asObservable()){
             return $0 && $1 && $2 && $3
 
-        }
-
-        validText.asObservable().subscribe(onNext: {[weak self] enable in
-            self?.loginButton.isEnabled = enable
-        }).disposed(by: self.disposeBag)
+//        validText.asObservable().subscribe(onNext: {[weak self] enable in
+//            self?.loginButton.isEnabled = enable
+//        }).disposed(by: self.disposeBag)
         
     }
 
     
     @IBAction func loginClicked(_ sender: Any) {
-        let alert = UIAlertController(title: "Wooo!", message: "Registration completed!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let lrxViewController = LearnRxSwiftViewController()
+        show(lrxViewController, sender: nil)
     }
     
 
 }
-
