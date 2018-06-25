@@ -87,6 +87,7 @@ class ViewController: UIViewController {
         
         let validText = Observable.combineLatest(validName.asObservable(), validPassword.asObservable(), validPhoneNumber.asObservable(), validEmail.asObservable()){
             return $0 && $1 && $2 && $3
+        }
 
 //        validText.asObservable().subscribe(onNext: {[weak self] enable in
 //            self?.loginButton.isEnabled = enable

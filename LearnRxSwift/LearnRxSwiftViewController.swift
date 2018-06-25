@@ -53,7 +53,6 @@ class LearnRxSwiftViewController: UIViewController {
             observer.onNext("🍊")
             
             if count == 1 {
-                observer.onError(TestError.test)
                 print("Error encountered")
                 count += 1
             }

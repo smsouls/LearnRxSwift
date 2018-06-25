@@ -23,3 +23,14 @@ DerivedData
 Pods
 !Podfile
 !Podfile.lock
+
+
+#Carthage
+Carthage/Build
+Carthage/Checkouts
+
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
