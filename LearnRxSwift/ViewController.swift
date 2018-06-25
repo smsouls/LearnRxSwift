@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    var label: UILabel!
     
     var warnMessage = NSMutableDictionary()
     
@@ -31,6 +32,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.label = UILabel(frame: CGRect(x: 100, y: 400, width: 200, height: 50))
+        self.view.addSubview(self.label)
+        self.label.textColor = UIColor.black
+        self.label.font = UIFont.systemFont(ofSize: 18)
+        self.label.rx_text.subscribe { text in
+            print(text)
+        }.disposed(by: self.disposeBag)
         //MARK:这种组合在一起比较简便,但是对于每个输入有特别的要求的话则不能满足
 //        textFields = [nameField, passwordField, phoneNumField, emailField]
 //        let validTextFieldCollection = textFields.map{textField in
@@ -83,6 +91,7 @@ class ViewController: UIViewController {
         emailField.rx.text.filter{$0 != nil
         }.subscribe(onNext: {[weak self] text in
             self?.warnMessage.setValue(self?.loginVM.eMailMessage(text!), forKey: "eMail")
+            self?.label.text = text
         }).disposed(by: self.disposeBag)
         
         let validText = Observable.combineLatest(validName.asObservable(), validPassword.asObservable(), validPhoneNumber.asObservable(), validEmail.asObservable()){
@@ -102,4 +111,15 @@ class ViewController: UIViewController {
     }
     
 
+}
+
+
+extension UILabel {
+    public var rx_text: ControlProperty<String> {
+        // 观察text
+        let source: Observable<String> = self.rx.observe(String.self, "text").map { $0 ?? "" }
+        let setter: (UILabel, String) -> Void = { $0.text = $1 }
+        let bindingObserver = Binder(self, binding: setter)
+        return ControlProperty<String>(values: source, valueSink: bindingObserver)
+    }
 }
