@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     
     var what: UILabel!
     
+    var videoView: UIView
+    
+    
     var warnMessage = NSMutableDictionary()
     
     let disposeBag = DisposeBag()
