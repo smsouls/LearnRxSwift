@@ -22,7 +22,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     var label: UILabel!
     
-    var aaaLabel = UILabel!
+    var bbbLabel: UILabel!
+    
+    var what: UILabel!
     
     var warnMessage = NSMutableDictionary()
     
