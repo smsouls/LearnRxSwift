@@ -24,6 +24,11 @@ class ViewController: UIViewController {
     
     var bbbLabel: UILabel!
     
+    var what: UILabel!
+    
+    var videoView: UIView
+    
+    
     var warnMessage = NSMutableDictionary()
     
     var tw: UIView!
