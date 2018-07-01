@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     
     var warnMessage = NSMutableDictionary()
     
+    var tw: UIView!
+    
     let disposeBag = DisposeBag()
     var loginVM = LoginViewModel()
     
