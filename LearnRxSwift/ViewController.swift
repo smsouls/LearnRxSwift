@@ -22,21 +22,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     var label: UILabel!
     
-    var bbbLabel: UILabel!
-    
-    var what: UILabel!
-    
     var videoView: UIView
     
     
     var warnMessage = NSMutableDictionary()
     
-    var tw: UIView!
     
     let disposeBag = DisposeBag()
     var loginVM = LoginViewModel()
     
     var textFields: [UITextField]!
+    
+    
+    var view: UIView!
+    
+    var aView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
