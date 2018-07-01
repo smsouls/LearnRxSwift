@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     var label: UILabel!
     
+    var bbbLabel: UILabel!
+    
     var warnMessage = NSMutableDictionary()
     
     let disposeBag = DisposeBag()
