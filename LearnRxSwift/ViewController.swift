@@ -37,6 +37,7 @@ class ViewController: UIViewController {
     var view: UIView!
     
     var aView: UIView!
+    var bView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
