@@ -21,14 +21,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     var label: UILabel!
+
     var videoView: UIView
     var warnMessage = NSMutableDictionary()
+ 
     let disposeBag = DisposeBag()
     var loginVM = LoginViewModel()
     var textFields: [UITextField]!
-    
-    
-    var aaaaaaaa: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
